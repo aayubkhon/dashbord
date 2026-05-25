@@ -1,0 +1,82 @@
+@import '../variables/colors';
+@import '../variables/spacing';
+@import '../variables/shadows';
+
+// Display
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+.gap-sm { gap: $gap-sm; }
+.gap-md { gap: $gap-md; }
+.gap-lg { gap: $gap-lg; }
+
+// Padding
+.p-sm { padding: $pad-sm; }
+.p-md { padding: $pad-md; }
+.p-lg { padding: $pad-lg; }
+.p-xl { padding: $pad-xl; }
+
+.px-md { padding-left: $pad-md; padding-right: $pad-md; }
+.py-lg { padding-top: $pad-lg; padding-bottom: $pad-lg; }
+
+// Margin
+.m-lg { margin: $mar-lg; }
+.mb-sm { margin-bottom: $mar-sm; }
+.mb-md { margin-bottom: $mar-md; }
+.mb-lg { margin-bottom: $mar-lg; }
+.mb-xl { margin-bottom: $mar-xl; }
+.mt-lg { margin-top: $mar-lg; }
+
+// Text
+.text-center { text-align: center; }
+.text-muted { color: $color-text-secondary; }
+.font-bold { font-weight: bold; }
+.font-semibold { font-weight: 600; }
+
+// Shadow
+.shadow-md { box-shadow: $shadow-md; }
+.shadow-lg { box-shadow: $shadow-lg; }
+.shadow-xl { box-shadow: $shadow-xl; }
+
+// Border & Radius
+.rounded-lg { border-radius: 12px; }
+.rounded-xl { border-radius: 16px; }
+
+// Badge
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $pad-xs $pad-sm;
+  border-radius: 9999px;
+  font-size: $font-xs;
+  font-weight: 600;
+  background-color: rgba($color-primary, 0.1);
+  color: $color-primary;
+}
+
+// Divider
+.divider {
+  border-top: 1px solid $color-border;
+  margin: $mar-lg 0;
+}
+
+// Animations
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

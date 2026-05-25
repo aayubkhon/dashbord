@@ -1,0 +1,76 @@
+@import '../variables/colors';
+@import '../variables/spacing';
+@import '../variables/shadows';
+@import '../variables/fonts';
+
+.chart_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $mar-lg;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $gap-lg;
+  }
+}
+
+.chart-controls {
+  display: flex;
+  gap: $gap-md;
+  margin-top: 10px;
+}
+
+.chart-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $gap-lg;
+  margin-top: $mar-lg;
+
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-box {
+  padding: $pad-lg;
+  border-radius: 12px;
+  text-align: center;
+
+  &.stat-primary {
+    background: linear-gradient(135deg, rgba($color-primary, 0.1) 0%, rgba($color-primary, 0.05) 100%);
+    border: 1px solid rgba($color-primary, 0.2);
+  border: 1px solid red;
+
+  }
+
+  &.stat-success {
+    background: linear-gradient(135deg, rgba($color-success, 0.1) 0%, rgba($color-success, 0.05) 100%);
+    border: 1px solid rgba($color-success, 0.2);
+  }
+
+  &.stat-warning {
+    background: linear-gradient(135deg, rgba($color-warning, 0.1) 0%, rgba($color-warning, 0.05) 100%);
+    border: 1px solid rgba($color-warning, 0.2);
+  }
+}
+
+.stat_label {
+  font-size: $font-sm;
+  font-weight: $font-semibold;
+  margin-bottom: $mar-sm;
+}
+
+.stat_value {
+  font-size: $font-4xl;
+  font-weight: $font-bold;
+  font-family: $font-display;
+  margin-bottom: $mar-xs;
+}
+
+.stat_unit {
+  font-size: $font-xs;
+  color: $color-text-secondary;
+  margin: 0;
+}

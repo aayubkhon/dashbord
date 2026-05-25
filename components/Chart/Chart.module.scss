@@ -1,0 +1,133 @@
+@import '@/styles/variables/colors';
+@import '@/styles/variables/spacing';
+@import '@/styles/variables/shadows';
+@import '@/styles/components/chart';
+
+.chartsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-lg;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $gap-lg;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  h3 {
+    margin-bottom: $mar-xs;
+    font-size: $font-2xl;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-sm;
+    color: $color-text-secondary;
+  }
+}
+
+.chartControls {
+  display: flex;
+  gap: $gap-md;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    button {
+      flex: 1;
+    }
+  }
+}
+
+.chartStats {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: $gap-lg;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  h4 {
+    margin: 0 0 $mar-lg 0;
+    font-size: $font-xl;
+    color: $color-text-primary;
+  }
+}
+
+.statsRight {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-lg;
+
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    grid-column: 1 / -1;
+
+    > div {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    > div {
+      flex: unset;
+    }
+  }
+}
+
+.statLabel {
+  font-size: $font-sm;
+  font-weight: 600;
+  margin-bottom: $mar-sm;
+  color: $color-text-secondary;
+}
+
+.statValue {
+  font-size: $font-4xl;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: $mar-xs;
+  color: $color-text-primary;
+}
+
+.statUnit {
+  font-size: $font-xs;
+  color: $color-text-secondary;
+  margin: 0;
+}
+
+.chartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+
+  > div:first-child {
+    font-size: $font-5xl;
+    margin-bottom: $mar-lg;
+  }
+
+  p {
+    color: $color-text-secondary;
+    font-weight: 500;
+    margin: 0;
+  }
+}

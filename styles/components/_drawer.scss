@@ -1,0 +1,113 @@
+@import "../variables/colors";
+@import "../variables/spacing";
+@import "../variables/shadows";
+@import "../variables/fonts";
+
+.drawer {
+  width: 280px;
+  background: linear-gradient(180deg, rgb(12, 35, 76) 100%);
+  color: $color-white;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-xl;
+}
+
+.drawer-header {
+  padding: $pad-2xl;
+  border-bottom: 1px solid rgba($color-white, 0.1);
+
+  h2 {
+    text-align: center;
+    color: $color-white;
+  }
+
+  p {
+    font-size: 10px;
+    color: rgba($color-white, 0.6);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.5px;
+    margin: 0;
+  }
+}
+
+.drawer-nav {
+  flex: 1;
+  padding: $pad-lg;
+
+  .nav-label {
+    font-size: 20px;
+    color: rgba($color-white, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+}
+
+.nav-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  background-color: transparent;
+  color: rgba($color-white, 0.7);
+  transition: all $transition-fast;
+
+  &:hover {
+    background-color: rgba($color-white, 0.1);
+    color: $color-white;
+
+  }
+
+  &.active {
+    background: linear-gradient(
+      135deg,
+      $color-primary 0%,
+      $color-primary-dark 100%
+    );
+    color: $color-white;
+    box-shadow: $shadow-lg;
+  }
+
+  .nav-item-title {
+    font-weight: $font-semibold;
+    font-size: $font-sm;
+    display: block;
+    margin-bottom: $mar-xs;
+  }
+
+  .nav-item-subtitle {
+    font-size: $font-xs;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+.drawer-footer {
+  padding: $pad-lg;
+  border-top: 1px solid rgba($color-white, 0.1);
+
+  .footer-text {
+    font-size: $font-xs;
+    color: rgba($color-white, 0.5);
+    line-height: $line-relaxed;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($color-white, 0.2);
+  border-radius: 3px;
+
+  &:hover {
+    background: rgba($color-white, 0.3);
+  }
+}

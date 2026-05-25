@@ -1,0 +1,70 @@
+@import '../variables/fonts';
+@import '../variables/colors';
+@import '../variables/spacing';
+
+body {
+  font-family: $font-body;
+  font-size: $font-base;
+  font-weight: $font-normal;
+  line-height: $line-normal;
+  color: $color-text-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-display;
+  font-weight: $font-semibold;
+  letter-spacing: $letter-tight;
+  margin-bottom: $mar-lg;
+  line-height: $line-tight;
+}
+
+h1 {
+  font-size: $font-5xl;
+  margin-bottom: $mar-xl;
+
+  @media (max-width: 768px) {
+    font-size: $font-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-4xl;
+  margin-bottom: $mar-xl;
+}
+
+h3 {
+  font-size: $font-2xl;
+  margin-bottom: $mar-lg;
+}
+
+h4 {
+  font-size: $font-xl;
+  margin-bottom: $mar-md;
+}
+
+p {
+  margin-bottom: $mar-md;
+  line-height: $line-relaxed;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+small {
+  font-size: $font-sm;
+  color: $color-text-secondary;
+}
+
+strong {
+  font-weight: $font-bold;
+}
+
+em {
+  font-style: italic;
+}

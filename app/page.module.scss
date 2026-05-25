@@ -1,0 +1,65 @@
+@import '@/styles/variables/colors';
+@import '@/styles/variables/spacing';
+
+.container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f4f8 0%, #f9fafb 100%);
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--pad-2xl);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: var(--pad-xl);
+  }
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: $mar-2xl;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: $color-text-primary;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 15px;
+    color: $color-text-secondary;
+    max-width: 600px;
+  }
+}
+
+.errorSection {
+  margin-bottom: $mar-xl;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.updates {
+margin-left: 50px;
+height: 400px;
+}
+
+.divider {
+  border-top: 1px solid $color-border;
+  margin: $mar-lg 0;
+}

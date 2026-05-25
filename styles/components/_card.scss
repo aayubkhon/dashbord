@@ -1,0 +1,34 @@
+@import "../variables/colors";
+@import "../variables/spacing";
+@import "../variables/shadows";
+
+.card {
+  background-color: $color-white;
+  border-radius: 12px;
+  padding: $pad-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-base;
+  transition: all $transition-normal;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+    border-color: $color-gray-300;
+    transform: translateY(-2px);
+  }
+}
+
+.card-premium {
+  background: linear-gradient(135deg, $color-white 0%, $color-gray-50 100%);
+  border-radius: 16px;
+  padding: $pad-2xl;
+  border: 1px solid $color-gray-100;
+  box-shadow: $shadow-xl;
+  backdrop-filter: blur(10px);
+  transition: all $transition-normal;
+  margin-top: 20px;
+
+  &:hover {
+    box-shadow: $shadow-2xl;
+    border-color: $color-border;
+  }
+}

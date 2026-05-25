@@ -1,0 +1,42 @@
+@import '@/styles/variables/colors';
+@import '@/styles/variables/spacing';
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-md;
+}
+
+.postItem {
+  padding: $pad-lg;
+  border-left: 4px solid $color-primary;
+  background: linear-gradient(to right, rgba($color-primary, 0.05), white);
+  border-radius: 8px;
+  transition: all 300ms;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h4 {
+    margin: 0 0 $mar-xs 0;
+    color: $color-text-primary;
+  }
+}
+
+.postDate {
+  color: $color-text-secondary;
+  margin: 0 0 $mar-sm 0;
+}
+
+.postContent {
+  color: $color-text-primary;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.empty {
+  text-align: center;
+  color: $color-text-secondary;
+  padding: $pad-lg;
+}
